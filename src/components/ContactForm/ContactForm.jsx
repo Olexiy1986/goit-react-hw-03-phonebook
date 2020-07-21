@@ -23,6 +23,7 @@ class ContactForm extends Component {
   };
 
   hendleInputChange = ({ target }) => {
+    console.log(target);
     const { name, value } = target;
 
     this.setState({ [name]: value });

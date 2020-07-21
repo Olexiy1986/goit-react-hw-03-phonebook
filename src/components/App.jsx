@@ -44,6 +44,23 @@ class App extends Component {
 
       return;
     }
+    if (
+      contacts.some(
+        (contact) => contact.name !== name || contact.name !== number
+      )
+    ) {
+      toast.warn(`Please enter the correct name and number`, {
+        position: "top-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+
+      return;
+    }
 
     this.setState(({ contacts }) => ({
       contacts: [
