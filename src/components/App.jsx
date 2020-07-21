@@ -32,15 +32,7 @@ class App extends Component {
     const { contacts } = this.state;
 
     if (contacts.some((contact) => contact.name === name)) {
-      toast.warn(`${name} is already in contacts`, {
-        position: "top-left",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.warn(`${name} is already in contacts`);
 
       return;
     }
@@ -49,15 +41,7 @@ class App extends Component {
         (contact) => contact.name !== name || contact.name !== number
       )
     ) {
-      toast.warn(`Please enter the correct name and number`, {
-        position: "top-left",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.warn(`Please enter the correct name and number`);
 
       return;
     }
