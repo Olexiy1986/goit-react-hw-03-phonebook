@@ -33,20 +33,24 @@ class ContactForm extends Component {
     const { name, number } = this.state;
     return (
       <form onSubmit={this.hendleSubmit}>
-        <h3>Name</h3>
-        <input
-          type="text"
-          name="name"
-          value={name}
-          onChange={this.hendleInputChange}
-        />
-        <h3>Number</h3>
-        <input
-          type="text"
-          name="number"
-          value={number}
-          onChange={this.hendleInputChange}
-        />
+        <label>
+          Name
+          <input
+            type="text"
+            name="name"
+            value={name}
+            onChange={this.hendleInputChange}
+          />
+        </label>
+        <label>
+          Number
+          <input
+            type="text"
+            name="number"
+            value={number}
+            onChange={this.hendleInputChange}
+          />
+        </label>
         <button className={styles.addButton} type="submit">
           Add contact
         </button>
