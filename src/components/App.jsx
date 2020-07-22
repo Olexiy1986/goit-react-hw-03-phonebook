@@ -36,12 +36,8 @@ class App extends Component {
 
       return;
     }
-    if (
-      contacts.some(
-        (contact) => contact.name !== name || contact.name !== number
-      )
-    ) {
-      toast.warn(`Please enter the correct name and number`);
+    if (!name || !number) {
+      toast.warn(`Please enter the contact name and number`);
 
       return;
     }
